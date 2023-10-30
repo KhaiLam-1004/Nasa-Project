@@ -1,0 +1,24 @@
+{
+  "name": "nasa-20110427",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install cwd server",
+    "install-client": "npm install cwd client",
+    "install": "npm run install-server && npm run install-client ",
+    "server": " npm run watch --prefix server",
+    "client": " npm start --prefix client",
+    "watch": "npm run server & npm run client",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
+    "test": "npm run test --prefix && npm run test --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "client": "^0.0.1",
+    "cwd": "^0.10.0",
+    "morgan": "^1.10.0",
+    "server": "^1.0.38"
+  }
+}
